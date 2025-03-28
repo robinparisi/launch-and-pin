@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Launch & Pin",
+  
+  "version": "1.2",
+  "description": "Manage your pinned startup tabs",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon.svg",
+      "96": "icons/icon.svg"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["utils.js", "background.js"],
+    "persistent": false
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "launch-and-pin@robin-parisi.com"
+    }
+  }
+}
